@@ -3,3 +3,5 @@
 3. tiles-definitions.xml
 4. tiles-layout.xml
 5. layout_template.jsp  >> 공통css,js 추가
+
+https://searchcode.com/file/207656415/spring-webmvc/src/main/java/org/springframework/web/servlet/view/json/MappingJackson2JsonView.java/
