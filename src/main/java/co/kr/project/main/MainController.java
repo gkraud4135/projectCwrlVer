@@ -22,4 +22,20 @@ public class MainController {
 
         return new JsonView();
     }
+
+    @RequestMapping("tilesTest.do")
+    public String tilesTest( ModelMap model) throws Exception {
+
+        System.out.println("성공");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+        return "main/index";
+    }
+
+
+
+
+
+
 }

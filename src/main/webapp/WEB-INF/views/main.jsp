@@ -31,6 +31,9 @@
 <body>
 ㄴㅇㄴㅇㄴ
 <input type="button" id="ajaxBtn" value="AJAX버튼">
+<a href="/main/tilesTest.do">Tiles버튼</a>
+
+
 <div id="page">
     <div class="demonstrations">
         <div class="box" id="demo-size-small">small</div>
@@ -60,6 +63,7 @@ $(document).ready(function() {
     $("#ajaxBtn").on("click", function () {
         doAjax();
     });
+
 
 
 });
