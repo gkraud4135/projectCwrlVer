@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="/resources/js/tipped.js"></script>
+    <script type="text/javascript" src="/resources/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="/resources/css/tipped.css" />
 
     <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
@@ -29,8 +30,7 @@
 </head>
 <body>
 ㄴㅇㄴㅇㄴ
-<input type="button" id="btn1" value="버튼">
-
+<input type="button" id="ajaxBtn" value="AJAX버튼">
 <div id="page">
     <div class="demonstrations">
         <div class="box" id="demo-size-small">small</div>
@@ -57,16 +57,22 @@ $(document).ready(function() {
     Tipped.create("#demo-size-medium", "Medium", { size: "medium" });
     Tipped.create("#demo-size-large", "Large", { size: "large" });
     // 검색
-    $("#btn1").on("click", function () {
-        ajaxButton();
+    $("#ajaxBtn").on("click", function () {
+        doAjax();
     });
 
 
 });
 
-function ajaxButton() {
-alert("1");
-}
+const doAjax = function ajaxButton() {
 
+    const url = "<c:url value='/main/test.do'/>";
+    const jsonData = null;
+    const callBackFn = function (){
+        alert("SUCCEESS");
+    }
+
+    fnAjax(url,jsonData,callBackFn);
+}
 
 </script>

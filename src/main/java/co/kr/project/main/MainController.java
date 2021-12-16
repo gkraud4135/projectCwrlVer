@@ -18,7 +18,7 @@ public class MainController {
     @RequestMapping("test.do")
     public View earIDupCheck(@RequestBody Map<String, String> paramMap, ModelMap model, HttpServletResponse response) throws Exception {
 
-
+        System.out.println("성공");
 
         return new JsonView();
     }

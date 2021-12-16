@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script type="text/javascript" src="/resources/js/common.js"></script>
+
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/admin.css?version=1.91'/>" />
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/loading.css'/>" />
     <link rel="stylesheet" type="text/css" href="<c:url value='/js/jquery-ui-1.11.4.custom/jquery-ui.min.css' />" />
