@@ -1,51 +1,39 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hohyun77
-  Date: 2021-12-14
-  Time: 오전 11:21
-  To change this template use File | Settings | File Templates.
---%>
+
+        <%--
+          Created by IntelliJ IDEA.
+          User: hohyun77
+          Date: 2021-12-14
+          Time: 오전 11:21
+          To change this template use File | Settings | File Templates.
+        --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="/resources/css/tiles.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/tipped.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="/resources/js/common.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/admin.css?version=1.91'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/loading.css'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/js/jquery-ui-1.11.4.custom/jquery-ui.min.css' />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/js/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/js/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/timepicki.css'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/js/amcharts/style.css'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/js/amcharts/plugins/export/export.css' />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/tooltip/tipped.css'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/viewer.css'/>" />
-    <link rel="stylesheet" type="text/css" href="<c:url value='/js/notify/notify.css'/>" />
-
-    <script type="text/javascript" src="<c:url value='/js/promise/es6-promise.auto.min.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/promise/es6-promise.min.js'/>"></script>
-
-    <script type="text/javascript" src="<c:url value='/js/jquery-ui-1.11.4.custom/external/jquery/jquery.js'/>"> </script>
-    <script type="text/javascript" src="<c:url value='/js/jquery-ui-1.11.4.custom/jquery-ui.min.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/timepicki.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/datepick.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/monthpicker.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/tooltip/tipped.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/jquery.floatThead.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/JControl.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/classie.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/jquery.multifile.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/js/viewer.js'/>"></script>
-    <title><tiles:insertAttribute name="title"/></title>
+<title><tiles:insertAttribute name="title"/></title>
 </head>
 <body>
-    layout_template
-    <div id="content">
-    <div class="subContentArea">
+
+
+<header id="header">
     <tiles:insertAttribute name="header"/>
+</header>
+<section id="siteContent">
     <tiles:insertAttribute name="contents"/>
+</section>
+<footer id="footer">
     <tiles:insertAttribute name="footer"/>
-    </div>
-    </div>
+</footer>
+
+
 </body>
 </html>

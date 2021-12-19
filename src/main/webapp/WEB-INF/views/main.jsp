@@ -16,7 +16,6 @@
     <script type="text/javascript" src="/resources/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="/resources/css/tipped.css" />
 
-    <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex,nofollow" />
 
