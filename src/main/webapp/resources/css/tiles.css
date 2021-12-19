@@ -1,0 +1,21 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+#header {
+    background-color: gray;
+    height: 10vh;
+}
+
+#siteContent {
+    min-height: 200px;
+    padding-left: 10px;
+    background-color: white;
+    height: 83vh;
+}
+
+#footer {
+    background-color:gray;
+    height: 7vh;
+}
