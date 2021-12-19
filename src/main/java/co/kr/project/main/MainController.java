@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.View;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileInputStream;
 import java.util.Map;
 
 @Controller
@@ -34,11 +35,22 @@ public class MainController {
 
         System.setProperty("python.import.site","false");
         interpreter = new PythonInterpreter();
-        interpreter.exec("from java.lang import System");
+        //interpreter.execfile("C:\\py/test.py");
+        //interpreter.exec("print(sum(7,8))");
+
+        interpreter.execfile("C:\\py/project.py");
+        interpreter.exec("scrape_weather()");
+        interpreter.exec("scrape_headline_news()");
+        interpreter.exec("scrape_it_news()");
+        interpreter.exec("scrape_english()");
+
+
+/*        interpreter.exec("from java.lang import System");
         interpreter.exec("s = 'Hello World'");
         interpreter.exec("System.out.println(s)");
         interpreter.exec("print(s)");
         interpreter.exec("print(s[1:-1])");
+ */
 
         String index = paramMap.get("index");
         model.addAttribute("index", index);
