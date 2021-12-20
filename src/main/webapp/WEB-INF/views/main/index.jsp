@@ -15,6 +15,9 @@
 <body>
 <input type="button" id="ajaxBtn" value="AJAX버튼">
 <input type="button" id="ajaxPythonBtn" value="AJAXPython버튼">
+<p align="center">
+    <img width="500" height="352" id="imgView"/>
+</p>
 </body>
 </html>
 
@@ -48,7 +51,8 @@
         const url = "<c:url value='/main/pythonTest.do'/>";
         const jsonData = {index:12};
         const callBackFn = function (data){
-            alert(data);
+            //alert(data.index);
+            $("#imgView").attr("src", data.src);
         }
 
         fnAjax(url,jsonData,callBackFn);
