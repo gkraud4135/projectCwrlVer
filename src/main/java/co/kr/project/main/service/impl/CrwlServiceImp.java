@@ -5,9 +5,11 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+@Service("crwlService")
 public class CrwlServiceImp implements CrwlService {
 
     @Override

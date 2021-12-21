@@ -4,6 +4,7 @@ package co.kr.project.main.web;
 import co.kr.project.common.JsonView;
 
 import co.kr.project.main.service.MainService;
+import co.kr.project.main.service.impl.CrwlServiceImp;
 import co.kr.project.restApi.service.RestApiService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -25,6 +26,10 @@ public class MainController {
     @Resource(name = "restApiService")
     private RestApiService restApiService;
 
+    @Resource(name = "crwlService")
+    private CrwlServiceImp crwlService;
+
+
     @RequestMapping("test.do")
     public View test(@RequestBody Map<String, String> paramMap, ModelMap model, HttpServletResponse response) throws Exception {
 
@@ -39,8 +44,8 @@ public class MainController {
     public View pythonTest(@RequestBody Map<String, String> paramMap, ModelMap model) throws Exception {
         System.out.println("성공1");
 
-        //movieRanking();
-        //getGoogleSearch("코로나");
+        //crwlService.movieRanking();
+        //crwlService.getGoogleSearch("코로나");
         mainService.test("성공");
 
         restApiService.requestRestApi();
