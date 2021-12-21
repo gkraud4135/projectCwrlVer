@@ -1,68 +1,17 @@
-package co.kr.project.main;
+package co.kr.project.main.service.impl;
 
-
-import co.kr.project.common.JsonView;
-
+import co.kr.project.main.service.CrwlService;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.View;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
 
-@Controller
-@RequestMapping("/main/")
-public class MainController {
+public class CrwlServiceImp implements CrwlService {
 
-    @RequestMapping("test.do")
-    public View test(@RequestBody Map<String, String> paramMap, ModelMap model, HttpServletResponse response) throws Exception {
-
-        System.out.println("성공");
-        String index = paramMap.get("index");
-        model.addAttribute("index", index);
-
-        return new JsonView();
-    }
-
-    @RequestMapping("pythonTest.do")
-    public View pythonTest(@RequestBody Map<String, String> paramMap, ModelMap model) throws Exception {
-        System.out.println("성공1");
-
-        //movieRanking();
-        //getGoogleSearch("코로나");
-
-        String src = "";
-
-        String index = paramMap.get("index");
-        model.addAttribute("index", index);
-        model.addAttribute("src", src);
-
-        return new JsonView();
-    }
-
-    @RequestMapping("tilesTest.do")
-    public String tilesTest( ModelMap model) throws Exception {
-
-        System.out.println("성공");
-
-        String message = "성공";
-        model.addAttribute("message", message);
-        return "main/index";
-    }
-
-    public void movieRanking(){
+    @Override
+    public void movieRanking() throws Exception {
 
         //크롤링
         //로그인 세션정보
@@ -103,7 +52,8 @@ public class MainController {
 
     }
 
-    private static void getGoogleSearch(String subject) throws Exception {
+    @Override
+    public void getGoogleSearch(String subject) throws Exception {
 
         //subject = URLEncoder.encode(subject, "EUC-KR");
         String url = "https://www.google.com/search?q=" + subject + "&oq=&aqs=chrome.1.69i59i450l8.365205373j0j15&sourceid=chrome&ie=UTF-8";
@@ -124,5 +74,4 @@ public class MainController {
 
 
     }
-
 }
