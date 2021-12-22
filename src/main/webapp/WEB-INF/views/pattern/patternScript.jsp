@@ -13,6 +13,7 @@
 <body>
 <ul>
     <li><a href="/pattern/singleTon.do">SingleTon</a></li>
+    <li><a href="/pattern/strategy.do">Strategy</a></li>
 </ul>
 </body>
 </html>

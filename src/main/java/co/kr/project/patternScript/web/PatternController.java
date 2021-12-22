@@ -28,4 +28,13 @@ public class PatternController {
         return "pattern/singleTon";
     }
 
+    @RequestMapping("strategy.do")
+    public String strategy( ModelMap model) throws Exception {
+        System.out.println("Move to strategy Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/strategy";
+    }
 }

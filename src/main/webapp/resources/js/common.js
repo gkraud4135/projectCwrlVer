@@ -40,3 +40,29 @@ function fnAjax(actnUrl, jsonData, callBckFnctn) {
         }
     });
 }
+
+function getConfirm(msg, callback){
+    $.confirm({
+        title	: '',
+        titleClass: 'ConfirmAlert',
+        content	: '<div class="confirm">' + msg + '</div>',
+        icon    : 'fa fa-spinner fa-spin',
+        type	: 'green',
+        backgroundDismissAnimation : 'glow',
+        buttons	: {
+            confirm: {
+                text    : '확인',
+                btnClass: 'btn-blue',
+                action: function(){
+                    callback(true);
+                }
+            },
+            cancel: {
+                text    : '취소',
+                action: function(){
+                    callback(false);
+                }
+            }
+        }
+    });
+}

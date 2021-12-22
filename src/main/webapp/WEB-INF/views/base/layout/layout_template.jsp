@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="/resources/css/tiles.css">
     <link rel="stylesheet" type="text/css" href="/resources/css/tipped.css" />
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script type="text/javascript" src="/resources/js/common.js"></script>
 
 <title><tiles:insertAttribute name="title"/></title>
