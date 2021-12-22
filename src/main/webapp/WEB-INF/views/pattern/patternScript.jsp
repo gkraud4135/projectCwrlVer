@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: hohyun77
-  Date: 2021-12-14
-  Time: 오전 11:20
+  Date: 2021-12-22
+  Time: 오전 10:33
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,7 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="/main/main.do">Main</a>
-    <a href="/pattern/main.do">Pattern</a>
+<ul>
+    <li><a href="/pattern/singleTon.do">SingleTon</a></li>
+</ul>
 </body>
 </html>

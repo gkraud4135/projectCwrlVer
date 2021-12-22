@@ -9,4 +9,9 @@
 		<put-attribute name="contents" value="/WEB-INF/views/main/{1}.jsp" />
 	</definition>
 
+	<!-- 스크립트 패턴 연습 -->
+	<definition name="pattern/*" extends="layout_template">
+		<put-attribute name="contents" value="/WEB-INF/views/pattern/{1}.jsp" />
+	</definition>
+
 </tiles-definitions>

@@ -59,7 +59,7 @@ public class MainController {
         return new JsonView();
     }
 
-    @RequestMapping("tilesTest.do")
+    @RequestMapping("main.do")
     public String tilesTest( ModelMap model) throws Exception {
 
         System.out.println("성공");

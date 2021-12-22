@@ -30,9 +30,12 @@
 <section id="siteContent">
     <tiles:insertAttribute name="contents"/>
 </section>
+
+<%--
 <footer id="footer">
     <tiles:insertAttribute name="footer"/>
 </footer>
+--%>
 
 
 </body>
