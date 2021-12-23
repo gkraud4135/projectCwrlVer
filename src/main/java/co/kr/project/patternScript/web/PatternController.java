@@ -10,7 +10,7 @@ public class PatternController {
 
     @RequestMapping("main.do")
     public String patternMainPage( ModelMap model) throws Exception {
-        System.out.println("Move to singleTon Page");
+        System.out.println("Move to pattern Main Page");
 
         String message = "성공";
         model.addAttribute("message", message);
@@ -36,5 +36,25 @@ public class PatternController {
         model.addAttribute("message", message);
 
         return "pattern/strategy";
+    }
+
+    @RequestMapping("constructor.do")
+    public String constructor( ModelMap model) throws Exception {
+        System.out.println("Move to constructor Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/constructor";
+    }
+
+    @RequestMapping("abstractCharacterFactory.do")
+    public String abstractCharacterFactory( ModelMap model) throws Exception {
+        System.out.println("Move to abstractCharacterFactory Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/abstractCharacterFactory";
     }
 }
