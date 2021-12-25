@@ -2,6 +2,11 @@
 
 
 - message.property
-- getConfirm common.js
 - getAlert     common.js
-- 출력창 css
+
+
+
+
+
+
+mobile jquery

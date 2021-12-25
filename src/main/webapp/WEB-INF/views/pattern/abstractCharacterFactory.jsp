@@ -14,9 +14,6 @@
 </head>
 <body>
 <div>
-
-
-    <input type="button" id="confirm2" value="생성자 사용" hidden>
     <input type="button" id="codeCheck" value="코드 확인">
     <div id="testBox">
         <div>

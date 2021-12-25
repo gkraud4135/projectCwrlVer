@@ -57,4 +57,14 @@ public class PatternController {
 
         return "pattern/abstractCharacterFactory";
     }
+
+    @RequestMapping("builder.do")
+    public String builder( ModelMap model) throws Exception {
+        System.out.println("Move to builder Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/builder";
+    }
 }
