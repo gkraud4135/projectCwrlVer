@@ -67,4 +67,26 @@ public class PatternController {
 
         return "pattern/builder";
     }
+
+    @RequestMapping("adapter.do")
+    public String adapter( ModelMap model) throws Exception {
+        System.out.println("Move to adapter Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/adapter";
+    }
+
+    @RequestMapping("composite.do")
+    public String composite( ModelMap model) throws Exception {
+        System.out.println("Move to composite Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/composite";
+    }
+
+
 }

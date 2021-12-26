@@ -17,6 +17,7 @@
     <li><a href="/pattern/constructor.do">constructor</a></li>
     <li><a href="/pattern/abstractCharacterFactory.do">abstractCharacterFactory</a></li>
     <li><a href="/pattern/builder.do">builder</a></li>
+    <li><a href="/pattern/composite.do">composite(복합체)</a></li>
 </ul>
 </body>
 </html>
