@@ -52,8 +52,8 @@
             }
         });
 
-        let centuryArr = [];
-        let cohortArr = [];
+        let centuryArr = {};
+        let cohortArr = {};
 
         // 생성자 생성 (값)
         $("#addCentury").on("click", function () {
@@ -76,7 +76,8 @@
 
             let liObj = $('<li>', {
                 text: "중대명: "+name +"["+number+"]",
-                id: name
+                'data-name': name,
+                onclick: centuryClick(name)
             });
 
             $('#centuryList').append(liObj);
@@ -107,9 +108,7 @@
                     let century = centuryArr[name];
                     cohort.addCentury(century);
 
-                    let idx = centuryArr.indexOf(name);
-                    centuryArr.splice(idx, 1);
-
+                    delete centuryArr[name];
                 }
             });
 
@@ -125,17 +124,21 @@
 
     });
 
-    let centuryClick = function (){
+    let centuryClick = function (name){
         let li = $('#centuryList').children('li');
         li.on("click", function () {
-            let idOfLi = li.attr('id');
-            let classOfLi = $('#'+idOfLi);
 
-            if(classOfLi.hasClass("backgroundYellow")) {
-                classOfLi.removeClass("backgroundYellow");
-            } else {
-                classOfLi.addClass("backgroundYellow");
-            }
+            let idOfLi = li.data("data-name");
+            alert(idOfLi);
+
+            /*            let classOfLi = $('#'+idOfLi);
+
+                        if(classOfLi.hasClass("backgroundYellow")) {
+                            classOfLi.removeClass("backgroundYellow");
+                        } else {
+                            classOfLi.addClass("backgroundYellow");
+                        }*/
+
         });
 
     }
