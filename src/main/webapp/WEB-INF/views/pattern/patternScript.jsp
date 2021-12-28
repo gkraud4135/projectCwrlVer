@@ -18,6 +18,7 @@
     <li><a href="/pattern/abstractCharacterFactory.do">abstractCharacterFactory</a></li>
     <li><a href="/pattern/builder.do">builder</a></li>
     <li><a href="/pattern/composite.do">composite(복합체)</a></li>
+    <li><a href="/pattern/flyweight.do">flyweight(플라이급)</a></li>
 </ul>
 </body>
 </html>

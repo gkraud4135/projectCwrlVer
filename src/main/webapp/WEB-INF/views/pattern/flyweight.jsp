@@ -18,21 +18,13 @@
     <input type="button" id="codeCheck" value="코드 확인">
     <div id="testBox">
         <div class="backgroundPink">
-            <a>중대생성</a>
-            <input type="text" id="centuryname" placeholder="중대이름">
-            <input type="number" id="centurynumber" placeholder="중대원인원">
-            <input type="button" id="addCentury" value="생성">
-        </div>
-        <div class="backgroundGreen">
-            <a>연대생성 (생성할 중대를 클릭하세요)</a>
-            <input type="text" id="cohortname" placeholder="연대이름">
-            <input type="button" id="addCohort" value="생성"><br>
+            <a>캐릭터</a>
+            <input type="text" id="characterName" placeholder="캐릭터이름">
+            <input type="button" id="addCharacter" value="생성">
         </div>
         <div class="backgroundRed">
-            <a>----중대리스트----</a>
-            <ul id="centuryList"></ul>
-            <a>----연대리스트----</a>
-            <ul id="cohortList"></ul>
+            <a>----캐릭터리스트----</a>
+            <ul id="characterList"></ul>
         </div>
         <a id="textBox"></a>
     </div>
@@ -56,144 +48,39 @@
             }
         });
 
-        let centuryArr = {};
-        let cohortArr = {};
-
-        // 생성자 생성 (값)
-        $("#addCentury").on("click", function () {
-            let name = $('#centuryname').val();
-            let number = $('#centurynumber').val();
-
-            if (name == '') {
-                alert("중대이름을 입력해주세요");
-                return true;
-            } else if (number <= 0) {
-                alert("인원은 마이너스 일수없습니다");
-                return true;
-            } else if (centuryArr[name]) {
-                alert("이미 등록된 중대입니다");
-                return true;
-            }
-
-            let century = new Century(name,number);
-            centuryArr[name] = century;
+        //캐릭터 생성
+        $("#addCharacter").on("click", function () {
+            let characterName = $("#characterName").val();
+            let soldier1 = new Legionary(characterName);
 
             let liObj = $('<li>', {
-                text: "중대명: "+name +"["+number+"]",
-                'data-name': name
-            }).on("click", function () {
-                const clickedLi = "backgroundYellow";
-                if($(this).hasClass(clickedLi)) {
-                    $(this).removeClass(clickedLi);
-                } else {
-                    $(this).addClass(clickedLi);
-                }
-            });
+                text: "중대명: "+characterName+" HP: "+soldier1.hp+" att: "+soldier1.att,
+                'data-name': characterName
+            }).createTip(characterName);
 
-            $('#centuryList').append(liObj);
-        });
+            $('#characterList').append(liObj);
 
-        $("#addCohort").on("click", function () {
-            let name = $('#cohortname').val();
-            let li = $('#centuryList').children('li');
-            let length =  $('.backgroundYellow').length;
-
-            if (name == '') {
-                alert("연대이름을 입력해주세요");
-                return true;
-            }
-            if (length == 0) {
-                alert("중대를 최소 1개 이상 선택해주세요");
-                return true;
-            }
-
-            let cohort = new Cohort(name);
-            cohortArr[name] = cohort;
-
-            li.each(function(){
-                let tf = $(this).hasClass("backgroundYellow");
-                let name = $(this).attr('data-name');
-                if (tf) {
-                    let century = centuryArr[name];
-                    cohort.addCentury(century);
-
-                    delete centuryArr[name];
-                }
-            });
-
-            $("#centuryList").children('li').remove(".backgroundYellow");
-
-
-            let liObj = $('<li>', {
-                text: "연대명: "+name +"["+cohort.getNumber()+"]",
-                'data-name': cohort
-            }).on("click", function () {
-
-            });
-
-            $("#cohortList").append(liObj);
 
         });
 
-
+        //각 객체의 요소
+        //soldier1.hp; // 50
+        //soldier1.hp = 40;
+        //soldier2.hp; // soldier1과 상관 없이 그대로 50
+        prototype
     });
 
 
-    let Century = (function() {
-        function Century(leader,number) {
-            this.leader = leader;
-            this.number = (number != null) ? number : 0;
+    let Legionary = (function() {
+        function Legionary(name) {
+            this.name = name;
         }
-        Century.prototype.getLeader = function() {
-            return this.leader;
+        Legionary.prototype.hp = 50;
+        Legionary.prototype.att = 5;
+        Legionary.prototype.attack = function(target) {
+            alert(this.name + '가 ' + target + '를 공격합니다');
         };
-        Century.prototype.getNumber = function() {
-            return this.number; // 중대는 80명
-        }
-        return Century;
+        return Legionary;
     })();
-    let Cohort = (function() {
-        function Cohort(leader) {
-            this.leader = leader;
-            this.centuries = [];
-        }
-        Cohort.prototype.getLeader = function() {
-            return this.leader;
-        };
-        Cohort.prototype.getNumber = function() {
-            let sum = 0;
-            this.centuries.forEach(function(century) {
-                sum += parseInt(century.getNumber());
-            });
-            return sum;
-        };
-        Cohort.prototype.addCentury = function(century) {
-            this.centuries.push(century);
-            return this;
-        };
-        return Cohort;
-    })();
-/*
-    let Legion = (function() {
-        function Legion(leader) {
-            this.leader = leader;
-            this.cohorts= [];
-        }
-        Legion.prototype.getLeader = function() {
-            return this.leader;
-        };
-        Legion.prototype.getNumber = function() {
-            let sum = 0;
-            this.cohorts.forEach(function(cohort) {
-                sum += cohort.getNumber();
-            });
-            return sum;
-        }
-        Legion.prototype.addCohort = function(cohort) {
-            this.cohorts.push(cohort);
-            return this;
-        };
-        return Legion;
-    })();
-*/
+
 </script>

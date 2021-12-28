@@ -88,5 +88,15 @@ public class PatternController {
         return "pattern/composite";
     }
 
+    @RequestMapping("flyweight.do")
+    public String flyweight( ModelMap model) throws Exception {
+        System.out.println("Move to flyweight Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/flyweight";
+    }
+
 
 }

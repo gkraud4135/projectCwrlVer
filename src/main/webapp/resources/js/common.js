@@ -1,3 +1,5 @@
+document.write("<script src='/resources/js/tipped.js'></script>");
+
 function fnAjax(actnUrl, jsonData, callBckFnctn) {
 
     $.ajax({
@@ -66,3 +68,13 @@ function getConfirm(msg, callback){
         }
     });
 }
+
+//툴팁생성
+$.fn.createTip = function(context) {
+    Tipped.create(this
+        , context
+        , {position : 'top', size : 'x-small', hideOthers: true}
+    );
+
+    return this;
+};
