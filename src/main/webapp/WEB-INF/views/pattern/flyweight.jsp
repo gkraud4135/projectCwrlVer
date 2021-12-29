@@ -67,7 +67,6 @@
         //soldier1.hp; // 50
         //soldier1.hp = 40;
         //soldier2.hp; // soldier1과 상관 없이 그대로 50
-        prototype
     });
 
 

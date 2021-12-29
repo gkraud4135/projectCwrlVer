@@ -98,5 +98,15 @@ public class PatternController {
         return "pattern/flyweight";
     }
 
+    @RequestMapping("facade.do")
+    public String facade( ModelMap model) throws Exception {
+        System.out.println("Move to facade Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/facade";
+    }
+
 
 }

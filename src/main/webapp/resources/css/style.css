@@ -131,3 +131,6 @@ html {
 .backgroundPink {background-color: lightpink}
 .backgroundYellow {background-color: yellow}
 .backgroundRed {background-color: #ed7669}
+.backgroundBlack {background-color: black}
+
+.fontWhite {color: white; font-weight: bold;}
