@@ -13,6 +13,9 @@
 
 </head>
 <body>
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/57bbb0a3f6f59c170071d2e2" target='_blank'>flyweight</a></h1>
+플라이급 패턴 : 메모리 풀을 미리 형성하여 참조하는 개체를 처음 사용할 때 저장한 뒤,<br>
+그 이후에 사용할 때에는 외부에서 불러오지 않고 저장해놓은 데이터를 사용하는 패턴
 <div>
 
     <input type="button" id="codeCheck" value="코드 확인">

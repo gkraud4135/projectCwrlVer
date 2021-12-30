@@ -15,6 +15,7 @@
     <li><a href="/pattern/singleTon.do">SingleTon</a></li>
     <li><a href="/pattern/strategy.do">Strategy</a></li>
     <li><a href="/pattern/constructor.do">constructor</a></li>
+    <li><a href="/pattern/adapter.do">adapter</a></li>
     <li><a href="/pattern/abstractCharacterFactory.do">abstractCharacterFactory</a></li>
     <li><a href="/pattern/builder.do">builder</a></li>
     <li><a href="/pattern/composite.do">composite(복합체)</a></li>

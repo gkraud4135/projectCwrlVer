@@ -13,8 +13,9 @@
 
 </head>
 <body>
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/580f17ef77023c0015ee9688" target='_blank'>Strategy</a></h1>
+전략 패턴 : 실행중에 알고리즘을 선택변경 할 수있도록 하는 행위 (알고리름 정의&캡슐화 후 선택사용)
 <div>
-
 
     <input type="button" id="confirm1" value="전략패턴 테스트">
     <input type="button" id="codeCheck" value="코드 확인">

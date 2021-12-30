@@ -13,6 +13,8 @@
 
 </head>
 <body>
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/57babe9f5abe0c17006fe230" target='_blank'>adapter</a></h1>
+어뎁터 패턴 : 기존에 있던 구조를 새 구조로 유연하게 전환하거나 새 구조에서 기존의 구조로 전환하는 데 사용하는 패턴
 <div>
 
     <input type="button" id="codeCheck" value="코드 확인">

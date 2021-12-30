@@ -13,6 +13,8 @@
 
 </head>
 <body>
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/57bb97735abe0c17006fe232" target='_blank'>composite</a></h1>
+복합체 패턴 : 트리 구조로 개별 객체와 그것을 합친 복합 객체를 동일하게 다루는 패턴
 <div>
 
     <input type="button" id="codeCheck" value="코드 확인">

@@ -12,7 +12,8 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1><a href="https://heecheolman.tistory.com/40" target='_blank'>SingleTon</a></h1>
+싱글톤 패턴 : 최초 생성 이후에 호출된 생성자는 최초에 생성한 객체를 반환(동일 인스턴스 게속사용)
 <div>
     <input type="button" id="confirm" value="confirm창 테스트">
     <input type="button" id="confirm1" value="싱글톤 테스트">

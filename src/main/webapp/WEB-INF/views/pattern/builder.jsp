@@ -13,6 +13,8 @@
 
 </head>
 <body>
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/57bab0ee5abe0c17006fe22f" target='_blank'>builder</a></h1>
+빌더 패턴 : 옵션이 많은 객체를 생성할때 사용
 <div>
 
     <input type="button" id="codeCheck" value="코드 확인">

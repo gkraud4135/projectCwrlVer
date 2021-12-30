@@ -13,6 +13,8 @@
 
 </head>
 <body>
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/57541bef7dfff917002c4e86" target='_blank'>constructor</a></h1>
+생성자 패턴 : 객체 생성 (상속을 사용)
 <div>
 
 

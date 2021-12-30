@@ -13,6 +13,8 @@
 
 </head>
 <body>
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/57b9692ae492d01700b0b75a" target='_blank'>abstractCharacterFactory</a></h1>
+추상팩토리 패턴 : 여러 종류의 객체를 의존적인 조합으로 생성하는 패턴
 <div>
     <input type="button" id="codeCheck" value="코드 확인">
     <div id="testBox">
