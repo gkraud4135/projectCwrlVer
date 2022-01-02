@@ -108,5 +108,24 @@ public class PatternController {
         return "pattern/facade";
     }
 
+    @RequestMapping("proxy.do")
+    public String proxy( ModelMap model) throws Exception {
+        System.out.println("Move to proxy Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/proxy";
+    }
+
+    @RequestMapping("command.do")
+    public String command( ModelMap model) throws Exception {
+        System.out.println("Move to command Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/command";
+    }
 
 }

@@ -21,6 +21,8 @@
     <li><a href="/pattern/composite.do">composite(복합체)</a></li>
     <li><a href="/pattern/flyweight.do">flyweight(플라이급)</a></li>
     <li><a href="/pattern/facade.do">facade(퍼사드급)</a></li>
+    <li><a href="/pattern/proxy.do">proxy</a></li>
+    <li><a href="/pattern/command.do">command</a></li>
 </ul>
 </body>
 </html>
