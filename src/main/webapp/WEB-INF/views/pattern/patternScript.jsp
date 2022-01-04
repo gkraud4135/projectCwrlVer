@@ -23,6 +23,8 @@
     <li><a href="/pattern/facade.do">facade(퍼사드급)</a></li>
     <li><a href="/pattern/proxy.do">proxy</a></li>
     <li><a href="/pattern/command.do">command</a></li>
+    <li><a href="/pattern/responsibility.do">chain of responsibility(책임연쇄)</a></li>
+    <li><a href="/pattern/iterator.do">iterator</a></li>
 </ul>
 </body>
 </html>

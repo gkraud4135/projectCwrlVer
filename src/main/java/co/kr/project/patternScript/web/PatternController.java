@@ -128,4 +128,24 @@ public class PatternController {
         return "pattern/command";
     }
 
+    @RequestMapping("responsibility.do")
+    public String responsibility( ModelMap model) throws Exception {
+        System.out.println("Move to responsibility Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/responsibility";
+    }
+
+    @RequestMapping("iterator.do")
+    public String iterator( ModelMap model) throws Exception {
+        System.out.println("Move to iterator Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/iterator";
+    }
+
 }
