@@ -14,30 +14,18 @@
 </head>
 <body>
 <h1><a href="https://www.zerocho.com/category/JavaScript/post/57df7063dfe17f0015e44121" target='_blank'>iterator</a></h1>
-반복자 패턴 : 순서가 있는(수열,배열 등)을 편리하게 탐색하는 패턴
+반복자 패턴 : 배열내 객체를 노출하지 않고 통일된 접근방식을 사용한다면 반복작업을 수행한다
 <div>
 
     <input type="button" id="codeCheck" value="코드 확인">
     <div id="testBox">
         <div class="backgroundPink">
             <a>메서드</a>
-            <input type="button" id="method" value="메서드 실행">
-            : 각 메서드의 조건을 순서대로 확인하여 먼저 true인것을 실행
-            <div>
-                <a>메서드1</a>
-                <label class="switch-button"><input type="checkbox" id="method1"/> <span class="onoff-switch"></span> </label>
-            </div>
-            <div>
-                <a>메서드2</a>
-                <label class="switch-button"><input type="checkbox" id="method2"/> <span class="onoff-switch"></span> </label>
-            </div>
-            <div>
-                <a>메서드3</a>
-                <label class="switch-button"><input type="checkbox" id="method3"/> <span class="onoff-switch"></span> </label>
-            </div>
+            <input type="button" id="addLine" value="클래스 생성">
+            : 객체를 10개씩 생성하여 실행시 한개씩 0.5초마다 반응한다
         </div>
-        <div class="backgroundBlack">
-            <ul id="consoleWindow"></ul>
+        <div class="backgroundYellow">
+            <ul id="conList"></ul>
         </div>
     </div>
 
@@ -62,10 +50,29 @@
             }
         });
 
+
+        let constructor = 1;
+        let list = [];
         //메서드 생성
-        $("#method").on("click", function () {
-            let choice = new DecisionMaker();
-            choice.makeDecision();
+        $("#addLine").on("click", function () {
+
+            for (let i=0; i<10; i++) {
+
+                //let arr = [];
+                //arr.push('constructor'+constructor);
+                let arr = new Array(10);
+                arr[i] = 'constructor'+ constructor;
+
+
+                let li = $('<li>');
+
+                
+
+                constructor++;
+            }
+
+            let beehives = new Beehives(['hive1', 'hive2', 'hive3', 'hive4', 'hive5', 'hive6', 'hive7', 'hive8', 'hive9', 'hive9']);
+
         });
 
     });
