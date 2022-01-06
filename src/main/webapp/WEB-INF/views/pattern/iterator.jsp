@@ -51,27 +51,55 @@
         });
 
 
+
         let constructor = 1;
         let list = [];
+        let lineCnt = 0;
         //메서드 생성
         $("#addLine").on("click", function () {
+            let liObj  = $('<li>');
+            let outDivObj = $('<div>', {class: "boxInline"});
+            let inDivObj = $('<div>');
+
+            let buttonObj = $('<button>', {
+                text: "실행",
+                id: "line"+lineCnt
+            }).on("click", function () {
+                let num = Number($(this).attr("id").substring(4));
+                let beehives = new Beehives(list[num]);
+
+                while (!beehives.done()) {
+                    beehives.next();
+                }
+            });
+
+            outDivObj.append(buttonObj);
+
+            let arr = new Array(10);
 
             for (let i=0; i<10; i++) {
 
                 //let arr = [];
                 //arr.push('constructor'+constructor);
-                let arr = new Array(10);
+
                 arr[i] = 'constructor'+ constructor;
 
+                inDivObj = $('<div>', {
+                    text: constructor,
+                    href:"javascript:void(0);",
+                    class: "backgroundGreen paddingSide marginSide fontWhite boxInline",
+                    id: "constructor"+constructor
+                });
 
-                let li = $('<li>');
-
-                
-
+                outDivObj.append(inDivObj);
                 constructor++;
             }
 
-            let beehives = new Beehives(['hive1', 'hive2', 'hive3', 'hive4', 'hive5', 'hive6', 'hive7', 'hive8', 'hive9', 'hive9']);
+            list.push(arr);
+            lineCnt++;
+
+            liObj.append(outDivObj);
+            $('#conList').append(liObj);
 
         });
 
@@ -83,22 +111,16 @@
             this.index = 0;
         }
         Beehives.prototype.next = function() {
-            console.log(this.hiveList[this.index++] + '에서 꿀을 걷습니다');
+            let value = this.hiveList[this.index++];
+            let constructor = $('#'+value);
+            constructor.removeClass("backgroundGreen");
+            constructor.addClass("backgroundPink");
+            //console.log(this.hiveList[this.index++] + '에서 꿀을 걷습니다');
         };
         Beehives.prototype.done = function() {
             return this.hiveList.length === this.index;
         };
         return Beehives;
     })();
-
-    let outConsole = function (message) {
-        let liObj = $('<li>', {
-            text: message,
-            class: "fontWhite"
-        });
-
-        $("#consoleWindow").append(liObj);
-
-    }
 
 </script>
