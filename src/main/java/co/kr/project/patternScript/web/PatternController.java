@@ -148,4 +148,14 @@ public class PatternController {
         return "pattern/iterator";
     }
 
+    @RequestMapping("mediator.do")
+    public String mediator( ModelMap model) throws Exception {
+        System.out.println("Move to mediator Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/mediator";
+    }
+
 }

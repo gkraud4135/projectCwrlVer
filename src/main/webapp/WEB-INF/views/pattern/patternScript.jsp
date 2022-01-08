@@ -25,6 +25,7 @@
     <li><a href="/pattern/command.do">command</a></li>
     <li><a href="/pattern/responsibility.do">chain of responsibility(책임연쇄)</a></li>
     <li><a href="/pattern/iterator.do">iterator</a></li>
+    <li><a href="/pattern/mediator.do">mediator</a></li>
 </ul>
 </body>
 </html>

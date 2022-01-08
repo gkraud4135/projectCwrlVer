@@ -13,8 +13,8 @@
 
 </head>
 <body>
-<h1><a href="https://www.zerocho.com/category/JavaScript/post/57df7063dfe17f0015e44121" target='_blank'>iterator</a></h1>
-반복자 패턴 : 배열내 객체를 노출하지 않고 통일된 접근방식을 사용한다면 반복작업을 수행한다
+<h1><a href="https://www.zerocho.com/category/JavaScript/post/57edfc3381d46f0015d3f0cc" target='_blank'>mediator</a></h1>
+중재자 패턴 : 모든 클래스간의 복잡한 로직을 캡슐화하여 하나의 클래스에 위임하여 처리하는 패턴
 <div>
 
     <input type="button" id="codeCheck" value="코드 확인">
