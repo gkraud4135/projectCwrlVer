@@ -158,4 +158,14 @@ public class PatternController {
         return "pattern/mediator";
     }
 
+    @RequestMapping("observer.do")
+    public String observer( ModelMap model) throws Exception {
+        System.out.println("Move to observer Page");
+
+        String message = "성공";
+        model.addAttribute("message", message);
+
+        return "pattern/observer";
+    }
+
 }
