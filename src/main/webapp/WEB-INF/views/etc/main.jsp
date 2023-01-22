@@ -22,8 +22,11 @@
         <span class="backgroundPink" id="addInput">AddInput</span>
         <span class="backgroundPink" id="insertImg">insertImg</span>
         <span class="backgroundPink" id="searchFiles">searchFiles</span>
-        <div id="inputDiv" class="backgroundBlue">
-        </div>
+        <form action="/etc/insertImg.do" method="post" enctype="multipart/form-data">
+            <div id="inputDiv" class="backgroundBlue">
+            </div>
+            <input type="submit" value="등록">
+        </form>
         <div id="filesDiv" class="backgroundGreen">
         </div>
     </div>
@@ -37,7 +40,7 @@
     $("#addInput").on("click", function() {
         $("#inputDiv").append(
             $("<div>").append(
-                $("<input>", {type:"file", name:"file"}),
+                $("<input>", {type:"file", name:"files"}),
                 $("<span>", {text:"delete", class:"backgroundYellow"}).on("click", function() {
                     $(this).parent("div").remove();
                 })

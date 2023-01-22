@@ -5,9 +5,11 @@ import co.kr.project.common.JsonView;
 import co.kr.project.main.service.MainService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.View;
 
 import javax.annotation.Resource;
@@ -15,10 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping("/etc/")
@@ -86,5 +85,27 @@ public class EtcController {
         return new JsonView();
     }
 
+    @RequestMapping("insertImg.do")
+    public String insertImg(HttpServletRequest request, FIleVo fileVo) {
+
+        String path = request.getSession().getServletContext().getRealPath("resources");    //resources 경로
+        String root = path + "\\uploadFiles" ;
+
+        File file = new File(root);
+        if(!file.exists()) file.mkdirs(); //폴더생성
+
+        for(MultipartFile item : fileVo.getFiles()) {
+            File changeFile = new File(root + "\\" + item.getOriginalFilename());
+            try {
+                item.transferTo(changeFile); //업로드
+                System.out.println("파일 업로드 성공");
+            } catch (IOException e) {
+                System.out.println("파일 업로드 실패");
+                e.printStackTrace();
+            }
+        }
+
+        return "etc/main";
+    }
 
 }
