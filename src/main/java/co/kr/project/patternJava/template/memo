@@ -1,0 +1,9 @@
+Tempalate method 패턴
+
+전체 절차는 정해져 있지만 세부 절차를 자식 클래스로 다양화할 수 있는 패턴
+
+main에서 naverMap과 kakaoMap이 initMap()을 실행하고
+각각 맵은 MapView에서 상속받은 메서드를 순서대로 실행하도록 되어있어
+각 Class에 구체화된         connectMapServer();
+                      showMapOnScreen();
+                      moveToCurrentLocation(); 이 순서대로 실행된다

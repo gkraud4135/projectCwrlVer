@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!-- 기본 레이아웃 -->
+	<definition name="layout_template" template="/WEB-INF/views/base/layout/layout_template.jsp">
+		<put-attribute name="title" 	value="CwrlProject" />
+		<put-attribute name="header" 	value="/WEB-INF/views/base/layout/header.jsp" />
+		<put-attribute name="contents" 	value="컨텐츠"/>
+		<!--<put-attribute name="footer"	value="/WEB-INF/views/base/layout/footer.jsp"	 />-->
+	</definition>
+
+</tiles-definitions>

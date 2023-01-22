@@ -1,0 +1,7 @@
+1. pom.xml  tiles
+2. dispatcher-servlet.xml
+3. tiles-definitions.xml
+4. tiles-layout.xml
+5. layout_template.jsp  >> 공통css,js 추가
+
+

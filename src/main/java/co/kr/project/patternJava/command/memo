@@ -1,0 +1,5 @@
+command 패턴
+
+MyProgram에서 설정된 Robot을 RobotKit 명령어 처리 클래스에
+Command추상클래스를 상속받는 각 명령어클래스를 넣고
+순서대로 실행(각 설정된 excute())한다
